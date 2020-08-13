@@ -1,8 +1,11 @@
 <!Doctype html>
 <html xmlns:th="http://thymeleaf.org">
-<head>
-    <title>Technical Blog application</title>
+
+<head th:replace="layout::site-head">
+<title>Spring MVC Application</title>
 </head>
+
+<header th:replace="layout::logged-out"></header>
 
 <body>
     <h1>All Technical Posts</h1>
@@ -13,9 +16,9 @@
             <div>
                 <p th:text="${p.body}"></p>
             </div>
+            <hr/>
         </post>
     </main>
-
 
 
 </body>
